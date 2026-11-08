@@ -1,5 +1,7 @@
 # jarvis-cmd-tidal
 
+> **Archived on 20261108 and no longer maintained.** Jarvis is using [Music Assistant](https://github.com/music-assistant) as its music integration point. Spotify and Pandora keep their own packages for power users, and Music Assistant covers every other service, so a package per service is not needed. Use [jarvis-cmd-music-assistant](https://github.com/alexberardi/jarvis-cmd-music-assistant) instead. The code here was an experimental draft that used an unofficial library and was never run against a TIDAL account.
+
 A [Jarvis](https://github.com/alexberardi/jarvis-server) Pantry package that plays music from your own paid TIDAL account through the node's speaker.
 
 ## What you can say
