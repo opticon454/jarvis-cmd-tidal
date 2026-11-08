@@ -1,0 +1,51 @@
+name: "tidal_play"
+display_name: "Tidal Play"
+description: "EXPERIMENTAL. Say \"play Hysteria by Muse on Tidal\" and the node plays it from your TIDAL account through its speaker, using an unofficial library."
+version: "0.1.0"
+min_jarvis_version: "0.9.0"
+license: Apache-2.0
+author:
+  github: "opticon454"
+categories: ["media"]
+keywords: ["tidal", "play", "music", "song", "album", "artist", "playlist"]
+
+components:
+  - type: command
+    name: tidal_play
+    path: commands/tidal_play/command.py
+
+packages:
+  - name: tidalapi
+    version: ">=0.8.0"
+  - name: requests
+    version: ">=2.31.0"
+
+secrets:
+  - key: TIDAL_TOKEN_TYPE
+    scope: integration
+    value_type: string
+    required: true
+    is_sensitive: false
+    description: "Token type from get_session.py (Bearer)"
+    friendly_name: "Token type"
+  - key: TIDAL_ACCESS_TOKEN
+    scope: integration
+    value_type: string
+    required: true
+    is_sensitive: true
+    description: "Access token from get_session.py"
+    friendly_name: "Access token"
+  - key: TIDAL_REFRESH_TOKEN
+    scope: integration
+    value_type: string
+    required: true
+    is_sensitive: true
+    description: "Refresh token from get_session.py"
+    friendly_name: "Refresh token"
+  - key: TIDAL_EXPIRY
+    scope: integration
+    value_type: string
+    required: true
+    is_sensitive: false
+    description: "Access token expiry from get_session.py (ISO date and time)"
+    friendly_name: "Expiry"
